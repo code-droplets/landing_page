@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
     <link rel="stylesheet" href="./style.css">
     <title>Landing Page</title>
 </head>
@@ -11,10 +14,10 @@
 <body>
 
 
-    <main class="main">
+    <main class="main" id="main">
 
         <div class="home flexD ">
-            
+
             <div class="topbar flex">
                 <img src="./images/rocket.png" class="iconImg" alt="">
                 <h1>Ready to start making sales ?</h1>
@@ -56,6 +59,7 @@
                     <img src="./images/homeImg.webp" alt="">
                 </div>
             </div>
+            <img src="./images/down-arrow.png" id="downArrow" class="iconImg" alt="">
         </div>
 
         <div class="about flexD">
@@ -68,37 +72,42 @@
                     <div class="line flex">
                         <div class="subInnerContent flex">
                             <img src="./images/pallete.png" class="miniIcon" alt="">
-                            <p><b>Diverse Designs : </b>With <span>500 themes</span>, we’ve got a style to match every vision.</p>
+                            <p><b>Diverse Designs : </b>With <span>500 themes</span>, we’ve got a style to match every
+                                vision.</p>
                         </div>
                     </div>
                     <div class="line flex">
                         <div class="subInnerContent flex">
-                            <img src="./images/quality.png" class="miniIcon"    alt="">
+                            <img src="./images/quality.png" class="miniIcon" alt="">
                             <p><b>Quality Assured : </b> Each template is crafted to perfection by design experts.</p>
                         </div>
                     </div>
                     <div class="line flex">
                         <div class="subInnerContent flex">
                             <img src="./images/cost.png" class="miniIcon" alt="">
-                            <p><b>Cost-Effective : </b>A single purchase gives you a plethora of options, <span>saving you time and money</span>.</p>
+                            <p><b>Cost-Effective : </b>A single purchase gives you a plethora of options, <span>saving
+                                    you time and money</span>.</p>
                         </div>
                     </div>
                     <div class="line flex">
                         <div class="subInnerContent flex">
                             <img src="./images/pencils.png" class="miniIcon" alt="">
-                            <p><b>Easy Customization : </b>Tailor each theme seamlessly to reflect <span>your brand’s identity</span>.</p>
+                            <p><b>Easy Customization : </b>Tailor each theme seamlessly to reflect <span>your brand’s
+                                    identity</span>.</p>
                         </div>
                     </div>
                     <div class="line flex">
                         <div class="subInnerContent flex">
                             <img src="./images/phon.png" class="miniIcon" alt="">
-                            <p><b>Responsive Layouts : </b>Our themes are <span>optimized for any device</span>, ensuring a flawless shopping experience.</p>
+                            <p><b>Responsive Layouts : </b>Our themes are <span>optimized for any device</span>,
+                                ensuring a flawless shopping experience.</p>
                         </div>
                     </div>
                     <div class="line flex">
                         <div class="subInnerContent flex">
                             <img src="./images/gift.png" class="miniIcon" alt="">
-                            <p><b>Exclusive Bonuses : </b>From dropshipping mastery to email marketing tips, we’ve packed in value to ensure your success.</p>
+                            <p><b>Exclusive Bonuses : </b>From dropshipping mastery to email marketing tips, we’ve
+                                packed in value to ensure your success.</p>
                         </div>
                     </div>
                 </div>
@@ -107,8 +116,8 @@
         </div>
 
         <div class="bonusContainer flexD">
-            <h1 class="bonusHeading flex">Bonus 1</h1>       
-            
+            <h1 class="bonusHeading flex">Bonus 1</h1>
+
             <h1 class="bonuscontent">Shopify Dropshipping<span> Mastery</span></h1>
             <p> Make big money with dropshipping and shopify mastery</p>
 
@@ -117,7 +126,117 @@
 
             </div>
         </div>
+
+        <div class="product flex">
+            <div class="productContainer flex">
+                <div class="leftCard flexD">
+                    <img src="./images/product_1.webp" alt="">
+                    <h1>7 Techniques to Minimize Your <span>Facebook Ad Costs</span></h1>
+                    <p>Streamline your campaigns with precise targeting and optimized strategies to cut unnecessary
+                        costs and boost ROI.</p>
+                </div>
+                <div class="rightCard flexD">
+                    <img src="./images/product_2.webp" alt="">
+                    <h1>Boosting Sales with <span>Email Marketing</span></h1>
+                    <p>Modern strategies to engage subscribers, nurture leads, and drive conversions using today's email
+                        marketing tactics.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="offer flexD">
+            <div class="offerHeading flex">
+                <img src="./images/gift.png" class="iconImg" alt="">
+                <h1>Unlock <span>Bonuses</span> Worth <span>₹ 3,396</span> If You Enroll Today</h1>
+            </div>
+
+            <img src="./images/offer.webp" class="offerImg" alt="">
+
+            <div class="priceContainer flexD">
+                <p><span id="bonus">#BONUS 1</span> : Master Dropshipping with Shopify: Guide to <span>Massive Profits</span> - <span>₹1598</span></p>
+                <p><span id="bonus">#BONUS 2</span> : 7 Techniques to Minimize Your Facebook Ad Costs - <span>₹999</span></p>
+                <p><span id="bonus">#BONUS 3</span> : How to Generate Sales With Email Marketing Today - <span>₹799</span></p>
+            </div>
+        </div>
+
+        <div class="totalPrice flexD">
+            <img src="./images/discountPrice.png" id="discount" alt="">
+            <a href="#" class="btn flex">
+                <img src="./images/trolley.png" class="iconImg" alt="">
+                <h4>Boost Your Store Today</h4>
+            </a>
+            <img src="./images/payment.png" id="paymentImg" alt="">
+        </div>
+        
+        <div class="services flex">
+            <div class="servicesCards flexD">
+                <img src="./images/cloud.png" alt="">
+                <h1>Instant Access</h1>
+                <p>Get your product immediately after purchase, with no wait time.</p>
+            </div>
+            <div class="servicesCards flexD">
+                <img src="./images/premium.png" alt="">
+                <h1>Premium Quality</h1>
+                <p>Experience top-notch quality, guaranteeing satisfaction and value for your purchase.</p>
+            </div>
+            <div class="servicesCards flexD">
+                <img src="./images/secure.png" alt="">
+                <h1>Secure Checkout</h1>
+                <p>Your transaction is 100% safe, ensuring protection of your personal and financial details.</p>
+            </div>
+        </div>
+        
+        <div class="website flexD">
+            <h1>These <span>Premium themes</span> are also included</h1>
+            <div class="websiteContainer flex">
+                <img src="./images/web1.webp" alt="">
+                <img src="./images/web2.webp" alt="">
+                <img src="./images/web3.png" alt="">
+                <img src="./images/web4.png" alt="">
+                <img src="./images/web5.webp" alt="">
+                <img src="./images/web6.webp" alt="">
+                <img src="./images/web7.webp" alt="">
+                <img src="./images/web8.webp" alt="">
+            </div>
+        </div>
+
+        <div class="slider flexD">
+            <h1>What customers <span>say</span> about us?</h1>
+            <section class="wrapper">
+                <i class="fa-solid fa-arrow-left button" id="prev"></i>
+                <div class="image-container">
+                  <div class="carousel">
+                    <img src="images/client1.webp" alt="" />
+                    <img src="images/client2.webp" alt="" />
+                    <img src="images/client3.webp" alt="" />
+                    <img src="images/client1.webp" alt="" />
+                    <img src="images/client2.webp" alt="" />
+                    <img src="images/client3.webp" alt="" />
+                    <img src="images/client1.webp" alt="" />
+                    <img src="images/client2.webp" alt="" />
+                  </div>
+                  <i class="fa-solid fa-arrow-right button" id="next"></i>
+                </div>
+              </section>
+        </div>
     </main>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+      integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+
     <script src="./main.js"></script>
 
 </body>

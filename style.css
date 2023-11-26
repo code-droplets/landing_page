@@ -9,12 +9,13 @@
     --new: rgba(73, 22, 169, 0.321);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 a {
     text-decoration: none;
     color: black;
@@ -182,6 +183,24 @@ a {
     font-size: 1vw;
 }
 
+@keyframes down {
+    0% {
+        transform: translateY(30px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+#downArrow {
+    animation: down .5s ease-in infinite;
+}
+
 .homeRight {
     justify-content: flex-start;
 }
@@ -242,6 +261,10 @@ a {
 }
 
 @media screen and (max-width: 1000px) {
+    #downArrow {
+        width: 30px;
+    }
+
     .home {
         padding-top: 10rem;
     }
@@ -294,6 +317,10 @@ a {
 }
 
 @media screen and (max-width: 700px) {
+    #downArrow {
+        width: 25px;
+    }
+
     .topbar img {
         width: 30px;
     }
@@ -446,7 +473,7 @@ a {
     .about .timeline {
         height: 450px;
     }
-    
+
     .line .subInnerContent img {
         width: 30px;
     }
@@ -668,91 +695,728 @@ a {
     width: 40vw;
 
 }
+
 @media screen and (max-width:1500px) {
     .bonusHeading {
         margin-bottom: 1rem;
     }
+
     .bonuscontent {
         margin: 1rem;
     }
 }
+
 @media screen and (max-width:1100px) {
     .bonusContainer img {
         width: 60vw;
-    
+
     }
+
     .bonuscontent {
         font-size: 3.5vw;
     }
-    .bonusHeading{
+
+    .bonusHeading {
         font-size: 3vw;
         width: 20%;
     }
+
     .bonuscontent span {
         color: var(--primary);
     }
-    
+
     .bonusContainer p {
         font-size: 1.8vw;
     }
-    
-   
+
+
 }
 
 @media screen and (max-width:700px) {
-    .bonusContainer{
+    .bonusContainer {
         min-height: 60vh;
     }
+
     .bonusContainer img {
         width: 70vw;
-    
+
     }
+
     .bonuscontent {
         font-size: 4vw;
         margin: 1rem;
     }
-    .bonusHeading{
+
+    .bonusHeading {
         font-size: 4vw;
         width: 20%;
     }
+
     .bonuscontent span {
         color: var(--primary);
     }
-    
+
     .bonusContainer p {
         font-size: 2.5vw;
     }
+
     .bonusContainer::before {
         transform: rotate(62deg) translate(50%, 0%);
-    
+
     }
-   
+
 }
+
 @media screen and (max-width:500px) {
-    .bonusContainer{
+    .bonusContainer {
         min-height: 50vh;
     }
+
     .bonusContainer img {
         width: 90vw;
-    
+
     }
+
     .bonuscontent {
         font-size: 5vw;
         margin: .5rem;
 
     }
-    .bonusHeading{
+
+    .bonusHeading {
         font-size: 5vw;
         width: 20%;
     }
+
     .bonuscontent span {
         color: var(--primary);
     }
-    
+
     .bonusContainer p {
         font-size: 3vw;
         margin: 0rem;
     }
+
+
+}
+
+.product {
+    width: 100%;
+    min-height: 90vh;
+    padding: 2rem;
+}
+
+.productContainer {
+    width: 90%;
+    padding: 4rem 0rem;
+}
+
+.leftCard,
+.rightCard {
+    width: 50%;
+    margin: 1rem 4rem;
+    background-color: rgb(239, 239, 239);
+    box-shadow: 15px 13px 53px -21px rgba(108, 108, 108, 0.83);
+    -webkit-box-shadow: 15px 13px 53px -21px rgba(108, 108, 108, 0.83);
+    -moz-box-shadow: 15px 13px 53px -21px rgba(108, 108, 108, 0.83);
+    border-radius: 10px;
+    padding: 2rem;
+    height: 500px;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.leftCard h1 span,
+.rightCard h1 span {
+    color: var(--primary);
+}
+
+.leftCard img,
+.rightCard img {
+    width: 30vw;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    transform: translateY(-130px);
+}
+
+.leftCard h1,
+.rightCard h1 {
+    font-size: 2vw;
+    text-align: center;
+    margin: 1rem 0rem;
+}
+
+.leftCard p,
+.rightCard p {
+    font-size: 1vw;
+    text-align: center;
+}
+
+@media screen and (max-width:1500px) {
+
+    .leftCard img,
+    .rightCard img {
+        transform: translateY(-190px);
+    }
+
+    .leftCard,
+    .rightCard {
+        height: 35vw;
+        margin: 1rem 2rem;
+
+    }
+
+}
+
+@media screen and (max-width:1300px) {
+
+    .leftCard img,
+    .rightCard img {
+        transform: translateY(-160px);
+    }
+
+    .leftCard,
+    .rightCard {
+        height: 30vw;
+
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    .productContainer {
+        flex-direction: column;
+    }
+
+    .leftCard img,
+    .rightCard img {
+        position: relative;
+        transform: translateY(0px);
+    }
+
+    .productContainer {
+        width: 100%;
+    }
+
+    .leftCard,
+    .rightCard {
+        height: 45vw;
+        padding: 1rem;
+        margin: 1rem;
+        width: 90%;
+    }
+
+    .leftCard h1,
+    .rightCard h1 {
+        font-size: 3vw;
+        text-align: center;
+        margin: 1rem 0rem;
+    }
+
+    .leftCard p,
+    .rightCard p {
+        font-size: 1.8vw;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+
+    .product {
+        padding: 1rem;
+    }
+
+    .leftCard img,
+    .rightCard img {
+        width: 40vw;
+    }
+
+    .productContainer {
+        width: 100%;
+    }
+
+    .leftCard,
+    .rightCard {
+        height: auto;
+        padding: 1rem;
+        margin: 1rem;
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .leftCard h1,
+    .rightCard h1 {
+        font-size: 4vw;
+        text-align: center;
+        margin: 1rem 0rem;
+    }
+
+    .leftCard p,
+    .rightCard p {
+        font-size: 2.5vw;
+        text-align: center;
+    }
+
+}
+
+.offer {
+    width: 100%;
+    min-height: 60vh;
+    text-align: center;
+    padding: 2rem;
+}
+
+.offerHeading h1 span {
+    color: var(--primary);
+}
+
+.offerHeading h1 {
+    font-size: 2vw;
+}
+
+.offer .offerImg {
+    width: 50vw;
+}
+
+.priceContainer {
+    width: 60%;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.offer p {
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin: .5rem;
+}
+
+.offer p span {
+    color: red;
+    font-weight: 700;
+}
+
+#bonus {
+    color: var(--primary);
+}
+
+@media screen and (max-width:800px) {
+    .offer {
+        min-height: 40vh;
+    }
+
+    .offerHeading h1 {
+        font-size: 3vw;
+    }
+
+    .offerHeading img {
+        width: 20px;
+    }
+
+    .offer .offerImg {
+        width: 60vw;
+    }
+
+    .offer p {
+        font-size: 2vw;
+
+    }
+
+    .priceContainer {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .offerHeading h1 {
+        font-size: 3vw;
+    }
+
+    .offer .offerImg {
+        width: 8 0vw;
+    }
+
+    .offer p {
+        font-size: 2.5vw;
+
+    }
+
+    .priceContainer {
+        width: 100%;
+    }
+
+    .offer {
+        padding: 1rem;
+    }
+
+}
+
+.totalPrice {
+    width: 100%;
+    min-height: 40vh;
+    margin-top: 2rem;
+
+}
+
+.totalPrice #discount {
+    width: 20vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.totalPrice #paymentImg {
+    width: 25vw;
+    margin-top: 1rem;
+}
+
+.totalPrice a {
+    width: 30%;
+    margin-top: 0rem;
+}
+
+.totalPrice a img {
+    width: 50px;
+}
+
+@media screen and (max-width:1200px) {
+    .totalPrice #discount {
+        width: 30vw;
+        height: auto;
+
+    }
+
+    .totalPrice #paymentImg {
+        width: 40vw;
+        margin-top: 1rem;
+    }
+
+    .totalPrice a {
+        width: 50%;
+        margin-top: 0rem;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .totalPrice {
+        min-height: 20vh;
+        margin-top: 1rem;
+    }
+
+    .totalPrice #discount {
+        width: 50vw;
+        height: auto;
+
+    }
+
+    .totalPrice #paymentImg {
+        width: 50vw;
+        margin-top: 1rem;
+    }
+
+    .totalPrice a {
+        width: 70%;
+        margin-top: 0rem;
+    }
+
+}
+
+.services {
+    width: 100%;
+    min-height: 40vh;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+
+}
+
+.services .servicesCards {
+    width: 450px;
+    margin: 2rem;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 15px 13px 53px -21px rgba(108, 108, 108, 0.83);
+    -webkit-box-shadow: 15px 13px 43px -21px rgba(108, 108, 108, 0.83);
+    -moz-box-shadow: 15px 13px 53px -21px rgba(108, 108, 108, 0.83);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.servicesCards img {
+    width: 8vw;
+    margin: 1rem;
+
+}
+
+.servicesCards h1 {
+    margin: .5rem 0rem;
+    font-size: 1.5vw;
+}
+
+.servicesCards p {
+    font-size: 1vw;
+}
+
+@media screen and (max-width:1400px) {
+
+    .services .servicesCards {
+        width: 350px;
+        margin: 2rem;
+    }
+
+    .servicesCards img {
+        width: 8vw;
+        margin: 1rem;
+
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+
+    .services .servicesCards {
+        width: 70%;
+        margin: 1rem;
+    }
+
+    .servicesCards img {
+        width: 12vw;
+        margin: 1rem;
+    }
+
+    .servicesCards h1 {
+        margin: .5rem 0rem;
+        font-size: 3vw;
+    }
+
+    .servicesCards p {
+        font-size: 2vw;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+    .services .servicesCards {
+        width: 90%;
+        margin: 1rem;
+    }
+
+    .servicesCards img {
+        width: 12vw;
+        margin: 1rem;
+    }
+
+    .servicesCards h1 {
+        margin: .5rem 0rem;
+        font-size: 4vw;
+    }
+
+    .servicesCards p {
+        font-size: 3vw;
+    }
+
+}
+
+.website {
+    width: 100%;
+    min-height: 80vh;
+    padding: 2rem;
+    margin-top: 2rem;
+
+}
+
+.website h1 {
+    font-size: 2.8vw;
+    margin: 2rem 0rem;
+
+}
+
+.website span {
+    color: var(--primary);
+}
+
+.websiteContainer {
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.websiteContainer img {
+    margin: 1rem;
+    border-radius: 10px;
+    width: 40%;
+}
+
+@media screen and (max-width:1100px) {
+
+    .websiteContainer img {
+        margin: 1rem;
+        border-radius: 10px;
+        width: 45%;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+
+    .websiteContainer img {
+        margin: 1rem 0rem;
+        border-radius: 10px;
+        width: 70%;
+    }
+
+    .websiteContainer {
+        flex-direction: column;
+    }
+
+    .website h1 {
+        font-size: 4vw;
+        margin: 2rem 0rem;
+
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .websiteContainer img {
+        margin: 1rem 0rem;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .websiteContainer {
+        flex-direction: column;
+    }
+
+    .website h1 {
+        font-size: 3.8vw;
+        margin: 2rem 0rem;
+
+    }
+}
+
+.slider {
+    width: 100%;
+    min-height: 40vh;
+    padding: 1rem;
+}
+.slider h1{
+    font-size: 2.5vw;
+    margin: 2rem 0rem;
+}
+.slider h1 span{
+    color:var(--primary) ;
+}
+.wrapper {
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper i.button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 36px;
+    width: 36px;
+    background-color: #343f4f;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s linear;
+    z-index: 100;
+    cursor: pointer;
+}
+
+i.button:active {
+    transform: scale(0.94) translateY(-50%);
+}
+
+i#prev {
+    left: 25px;
+}
+
+i#next {
+    right: 25px;
+}
+
+.image-container {
+    padding: 2rem 1rem;
+    height: 600px;
+    width: 75%;
+    overflow: hidden;
+
+}
+
+.image-container .carousel {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.carousel img {
+    height: 100%;
+    width: 100%;
+    margin: 2rem;
+    border-radius: 18px;
+    padding: 1rem;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: scale(1.1);
+
+}
+@media screen and (max-width:800px) {
+    .slider h1{
+        font-size: 4vw;
+        margin: 2rem 0rem;
+    }
+}
+@media screen and (max-width:700px) {
     
-   
+    .wrapper {
+        max-width: 500px;
+        width: 100%;
+        height: 500px;
+
+    }
+    .image-container {
+        height: 500px;
+        width: 90%;
+    }
+    .carousel img{
+        margin: 1rem;
+    }
+    
+}
+@media screen and (max-width:500px) {
+    .slider h1{
+        font-size: 5vw;
+        margin: 2rem 0rem;
+    }
+    .wrapper {
+        max-width: 500px;
+        width: 100%;
+        height: 500px;
+
+    }
+    .image-container {
+        height: 500px;
+        width: 90%;
+    }
+    .carousel img{
+        margin: 1rem;
+    }
+    
 }
