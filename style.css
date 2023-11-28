@@ -1225,7 +1225,7 @@ a {
     min-height: 80vh;
     padding: 2rem;
     margin-top: 2rem;
-
+    text-align: center;
 }
 
 .website h1 {
@@ -1291,92 +1291,25 @@ a {
     }
 
     .website h1 {
-        font-size: 3.8vw;
+        font-size: 4.5vw;
         margin: 2rem 0rem;
 
     }
 }
-
-.slider {
+.client{
     width: 100%;
-    min-height: 40vh;
-    padding: 1rem;
+    min-height: 30vh;
 }
-.slider h1{
-    font-size: 2.5vw;
-    margin: 2rem 0rem;
+.clientContainer{
+    flex-wrap: wrap;
 }
-.slider h1 span{
-    color:var(--primary) ;
-}
-.wrapper {
-    display: flex;
-    max-width: 500px;
-    width: 100%;
-    height: 600px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border-radius: 12px;
-    background-color: rgb(247, 247, 247);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+.clientContainer img{
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    margin: 1rem;
 }
 
-.wrapper i.button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 36px;
-    width: 36px;
-    background-color: #343f4f;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 36px;
-    color: #fff;
-    font-size: 15px;
-    transition: all 0.3s linear;
-    z-index: 100;
-    cursor: pointer;
-}
-
-i.button:active {
-    transform: scale(0.94) translateY(-50%);
-}
-
-i#prev {
-    left: 25px;
-}
-
-i#next {
-    right: 25px;
-}
-
-.image-container {
-    padding: 2rem 1rem;
-    height: 600px;
-    width: 75%;
-    overflow: hidden;
-
-}
-
-.image-container .carousel {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    transition: all 0.4s ease;
-}
-
-.carousel img {
-    height: 100%;
-    width: 100%;
-    margin: 2rem;
-    border-radius: 18px;
-    padding: 1rem;
-    object-fit: contain;
-    border-radius: 10px;
-    transform: scale(1);
-
-}
 @media screen and (max-width:800px) {
     .slider h1{
         font-size: 4vw;
